@@ -1,2 +1,2 @@
 # ShopRaiders
-Projetk von Jan und Philipp im Rahmen der Umschulung
+Projekt von Jan und Philipp im Rahmen der Umschulung
