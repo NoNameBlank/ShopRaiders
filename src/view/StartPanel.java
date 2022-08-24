@@ -45,7 +45,6 @@ public class StartPanel extends JPanel {
 //		JButton btnStart = new JButton("Zum Shop");
 //		btnStart.setBounds(288, 365, 120, 23);
 //		add(btnStart);
-//		
 		
 		JButton btnAktualisieren = new JButton("Aktuallisieren");
 		btnAktualisieren.setBounds(412, 364, 114, 23);
