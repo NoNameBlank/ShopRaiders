@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.Color;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -54,4 +55,10 @@ public class StartPanel extends JPanel {
 
 		
 	}
+	
+	public void addActionListenerToBtnStart(ActionListener al) {
+		this.getBtnStart().addActionListener(al);
+		
+	}
+	
 }
