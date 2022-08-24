@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.Color;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 
@@ -56,4 +57,14 @@ public class MainView extends JFrame {
 		
 	
 	}
+	
+	//Sage der Main View wo der ActionListener ist
+	public void addActionListenerToStartBtn(ActionListener al) {
+		this.getStartPanel().addActionListenerToBtnStart(al);
+	}
+
+	public void showMainPanel() {
+		super.setContentPane(this.getMainPanel());
+	}
+	
 }

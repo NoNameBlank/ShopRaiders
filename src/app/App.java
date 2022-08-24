@@ -1,11 +1,11 @@
 package app;
 
-import view.MainView;
+import controller.MainController;
 
 public class App {
 
 	public static void main(String[] args) {
-		new MainView();
+		new MainController();
 
 	}
 
