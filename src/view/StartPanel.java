@@ -46,6 +46,11 @@ public class StartPanel extends JPanel {
 //		btnStart.setBounds(288, 365, 120, 23);
 //		add(btnStart);
 		
+		
+		/*
+		zur späteren anbindung aktuallisieren der datenbanken
+		*/
+		
 		JButton btnAktualisieren = new JButton("Aktuallisieren");
 		btnAktualisieren.setBounds(412, 364, 114, 23);
 		add(btnAktualisieren);
