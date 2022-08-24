@@ -1,5 +1,7 @@
 package view;
 
+import java.awt.Color;
+
 import javax.swing.JFrame;
 
 public class MainView extends JFrame {
@@ -39,12 +41,14 @@ public class MainView extends JFrame {
 	public MainView() {
 		super.setLayout(null);
 		super.setBounds(0, 0, 1024, 794);
+		super.setBackground(Color.YELLOW);
 		super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
+		this.setMainPanel(new MainPanel());
 		this.setStartPanel(new StartPanel());
 		super.setContentPane(this.getStartPanel());
 		
-		this.setMainPanel(new MainPanel());
+	
 		
 		
 		
