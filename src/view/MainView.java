@@ -5,6 +5,8 @@ import javax.swing.JFrame;
 public class MainView extends JFrame {
 
 	 private StartPanel startPanel;
+	 private MainPanel mainPanel;
+	 
 	 
 	 
 
@@ -17,6 +19,20 @@ public class MainView extends JFrame {
 	public void setStartPanel(StartPanel startPanel) {
 		this.startPanel = startPanel;
 	}
+	
+	
+
+
+
+	public MainPanel getMainPanel() {
+		return mainPanel;
+	}
+
+
+
+	public void setMainPanel(MainPanel mainPanel) {
+		this.mainPanel = mainPanel;
+	}
 
 
 
@@ -27,6 +43,9 @@ public class MainView extends JFrame {
 		
 		this.setStartPanel(new StartPanel());
 		super.setContentPane(this.getStartPanel());
+		
+		this.setMainPanel(new MainPanel());
+		
 		
 		
 		super.setVisible(true);
