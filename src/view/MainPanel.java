@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.Color;
+import java.awt.event.ActionListener;
 
 import javax.swing.JPanel;
 
@@ -72,7 +73,14 @@ public class MainPanel extends JPanel {
 		
 	}
 	
+	//BtnWarenkorb MainPanel wird gesagt was zutun ist
+	public void addActionListenerToBtnWarenkorb(ActionListener al) {
+		this.getHeaderPanel().addActionListenerToBtnWarenkorb(al);
+	}
 	
-	
+	public void  showWarenkorb() {
+		this.getCardPanel().showWarenkorbPanel();
+	}
+
 
 }
