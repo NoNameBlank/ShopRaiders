@@ -6,19 +6,20 @@ import java.util.Arrays;
 import java.util.List;
 
 import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 
 public class KategoriePanel extends JPanel {
 
-	private List<JMenu> katList;
+	private List<JMenuItem> katList;
 
 
-	public List<JMenu> getKatList() {
+	public List<JMenuItem> getKatList() {
 		return katList;
 	}
 
 
-	public void setKatList(List<JMenu> katList) {
+	public void setKatList(List<JMenuItem> katList) {
 		this.katList = katList;
 	}
 

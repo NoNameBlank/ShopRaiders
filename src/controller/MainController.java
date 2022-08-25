@@ -19,6 +19,8 @@ public class MainController {
 	public MainController() {
 		this.setMainView(new MainView());
 		this.getMainView().addActionListenerToStartBtn(this::startBtn);
+		
+		this.getMainView().getMainPanel().getKategoriePanel().getKatList().get(0).addActionListener(this::kat1);
 	
 		
 		
@@ -27,5 +29,10 @@ public class MainController {
 	private void startBtn(ActionEvent e) {
 		this.getMainView().showMainPanel();
 	}
+	
+	private void kat1(ActionEvent e) {
+		System.out.println("kat1 wurde gedruckt");
+	}
+	
 
 }
