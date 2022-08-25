@@ -8,6 +8,9 @@ public class MainPanel extends JPanel {
 	
 	private HeaderPanel headerPanel;
 	private CardPanel cardPanel;
+	private KategoriePanel kategoriePanel;
+	
+	
 	
 	
 	
@@ -35,6 +38,20 @@ public class MainPanel extends JPanel {
 		this.cardPanel = cardPanel;
 	}
 
+	
+	
+
+
+	public KategoriePanel getKategoriePanel() {
+		return kategoriePanel;
+	}
+
+
+
+	public void setKategoriePanel(KategoriePanel kategoriePanel) {
+		this.kategoriePanel = kategoriePanel;
+	}
+
 
 
 	public MainPanel() {
@@ -47,6 +64,9 @@ public class MainPanel extends JPanel {
 		
 		this.setCardPanel(new CardPanel());
 		super.add(this.getCardPanel());
+		
+		this.setKategoriePanel(new KategoriePanel());
+		super.add(this.getKategoriePanel());
 		
 		
 		
