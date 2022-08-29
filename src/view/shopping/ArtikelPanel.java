@@ -131,4 +131,19 @@ public class ArtikelPanel extends JPanel {
 		super.add(this.getWarenkorb());
 
 	}
+		//konstruktur mit gezielten Parameter für die Kategorien abfrage
+		public ArtikelPanel(String name, String bild, String produktBeschr, double preis ) {
+			this(); //?
+			this.getLblProductName().setText(name);
+			this.getLblProductPicture().setText(bild);
+			this.getLblProductDescription().setText(produktBeschr);
+			this.getLblPreis().setText("euroi" + preis);
+		}
+
+
+
+
+
+
 }
+

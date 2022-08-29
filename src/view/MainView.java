@@ -45,20 +45,30 @@ public class MainView extends JFrame {
 		this.getStartPanel().addActionListenerToBtnStart(al);
 	}
 
-	//BtnWarenkorb
+	// BtnWarenkorb
 	public void addActionListenerToBtnWarenkorb(ActionListener al) {
 		this.getMainPanel().addActionListenerToBtnWarenkorb(al);
 	}
-	
-	
-	
+
+	//KassePanel
+	public void addActionListenerToBtnKasse(ActionListener al) {
+		this.getMainPanel().addActionListenerToBtnKasse(al);
+	}
+
 	public void showMainPanel() {
 		super.setContentPane(this.getMainPanel());
 	}
-	//WarenKorb
+
+	// WarenKorb
 	public void showWarenkorbPanel() {
 		this.getMainPanel().showWarenkorb();
-		
+
+	}
+
+	// KassePanel
+	public void showKassePanel() {
+		this.getMainPanel().showKassePanel();
+
 	}
 
 }

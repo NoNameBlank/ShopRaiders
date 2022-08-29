@@ -1,4 +1,4 @@
-package view;
+package view.kategorie;
 
 import java.awt.Color;
 import java.util.ArrayList;
