@@ -5,6 +5,8 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JPanel;
 
+import view.kategorie.KategoriePanel;
+
 public class MainPanel extends JPanel {
 	
 	private HeaderPanel headerPanel;
@@ -78,10 +80,18 @@ public class MainPanel extends JPanel {
 		this.getHeaderPanel().addActionListenerToBtnWarenkorb(al);
 	}
 	
+	//BtnKasse 
+	public void addActionListenerToBtnKasse(ActionListener al) {
+		this.getCardPanel().getWarenKorbPanel().addActionListenerToBtnKasse(al);
+	}
+	
 	//Befehl für Warenkorb anzeigen
 	public void  showWarenkorb() {
 		this.getCardPanel().showWarenkorbPanel();
 	}
 
+	public void showKassePanel() {
+		this.getCardPanel().showKassePanel();
+	}
 
 }

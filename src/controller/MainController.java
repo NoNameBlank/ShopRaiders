@@ -20,6 +20,7 @@ public class MainController {
 		this.setMainView(new MainView());
 		this.getMainView().addActionListenerToStartBtn(this::startBtn);
 		this.getMainView().addActionListenerToBtnWarenkorb(this::showWarenkorbPanel);
+		this.getMainView().addActionListenerToBtnKasse(this::showKassePanel);
 
 		this.getMainView().getMainPanel().getKategoriePanel().getKatList().get(0).addActionListener(this::kat1);
 		this.getMainView().getMainPanel().getKategoriePanel().getKatList().get(1).addActionListener(this::kat2);
@@ -36,7 +37,15 @@ public class MainController {
 		//System.out.println("AUsgabe: WarenkorbAnzeigen");
 		this.getMainView().showWarenkorbPanel();
 	}
+	
+	//Btn zeig KassePanel
 
+	private void showKassePanel(ActionEvent e) {
+		this.getMainView().showKassePanel();
+	}
+	
+	
+	
 	private void kat1(ActionEvent e) {
 		this.getMainView().getMainPanel().getCardPanel().getShoppingPanel().showSearchResults("Kat1", "Kat1 ", "Kat1",
 				0);
