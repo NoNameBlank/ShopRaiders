@@ -28,7 +28,7 @@ public class KategoriePanel extends JPanel {
 		//super.setLayout(null); sofern der Befehl drin ist zeichnet er nicht die Bottuns
 		super.setBounds(0, 150, 100, 618);
 		super.setBackground(Color.WHITE);
-		super.setOpaque(true);//muss das hier in dem Fall sein?
+		
 		
 		this.setKatList(new ArrayList<>());
 		

@@ -57,7 +57,7 @@ public class MainPanel extends JPanel {
 
 	public MainPanel() {
 		super.setLayout(null);
-		super.setBounds(0,0,1024, 768);
+		super.setBounds(0,0,1024, 794);
 		super.setBackground(Color.green);
 		
 		this.setHeaderPanel(new HeaderPanel());
