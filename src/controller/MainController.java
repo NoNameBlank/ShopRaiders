@@ -33,7 +33,8 @@ public class MainController {
 	
 	//Btn Warenkorb
 	private void showWarenkorbPanel(ActionEvent e) {
-		//this.getMainView().WarenkorbPanel();
+		System.out.println("AUsgabe: WarenkorbAnzeigen");
+		this.getMainView().showWarenkorbPanel();
 	}
 	
 	private void kat1(ActionEvent e) {

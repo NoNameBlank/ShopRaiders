@@ -50,13 +50,15 @@ public class MainView extends JFrame {
 		this.getMainPanel().addActionListenerToBtnWarenkorb(al);
 	}
 	
-	//BtnWarenKorb
-	public void showKategoriePanel() {
-		this.getMainPanel().getKategoriePanel();
-	}
+	
 	
 	public void showMainPanel() {
 		super.setContentPane(this.getMainPanel());
+	}
+	//WarenKorb
+	public void showWarenkorbPanel() {
+		this.getMainPanel().showWarenkorb();
+		
 	}
 
 }

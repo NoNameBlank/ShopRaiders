@@ -78,6 +78,7 @@ public class MainPanel extends JPanel {
 		this.getHeaderPanel().addActionListenerToBtnWarenkorb(al);
 	}
 	
+	//Befehl für Warenkorb anzeigen
 	public void  showWarenkorb() {
 		this.getCardPanel().showWarenkorbPanel();
 	}

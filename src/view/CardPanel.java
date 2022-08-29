@@ -1,7 +1,7 @@
 package view;
 
+import java.awt.CardLayout;
 import java.awt.Color;
-import java.awt.event.ActionListener;
 
 import javax.swing.JPanel;
 
@@ -13,8 +13,11 @@ public class CardPanel extends JPanel {
 
 	private ShoppingPanel shoppingPanel;
 	private WarenkorbPanel warenKorbPanel;
-	private HeaderPanel headerPanel;
-
+	
+	private CardLayout cardLayout;
+	
+	private final String warenkorb = "warenkorb";
+	
 	public ShoppingPanel getShoppingPanel() {
 		return shoppingPanel;
 	}
@@ -33,34 +36,38 @@ public class CardPanel extends JPanel {
 
 		
 	
-	public HeaderPanel getHeaderPanel() {
-		return headerPanel;
+	
+	//CardLayout = Layoutmanager
+	public CardLayout getCardLayout() {
+		return cardLayout;
 	}
 
-	public void setHeaderPanel(HeaderPanel headerPanel) {
-		this.headerPanel = headerPanel;
+	public void setCardLayout(CardLayout cardLayout) {
+		this.cardLayout = cardLayout;
 	}
 
 	public CardPanel() {
 
-		super.setLayout(null);
+		
 		super.setBounds(100, 150, 924, 618);
 		super.setBackground(Color.PINK);
-
+		
+		this.setCardLayout(new CardLayout());
+		super.setLayout(this.getCardLayout());
+		
 		this.setShoppingPanel(new ShoppingPanel());
 		super.add(this.getShoppingPanel());
 		
 		this.setWarenKorbPanel(new WarenkorbPanel());
-		super.add(this.getWarenKorbPanel());
+		super.add(this.getWarenKorbPanel(),  this.warenkorb);
 
-	}
-
-	public void addActionListenerToBtnWarenkorb(ActionListener al) {
-		this.getHeaderPanel().addActionListenerToBtnWarenkorb(al);
 	}
 	
 	public void showWarenkorbPanel() {
-		this.showWarenkorbPanel();
+		this.getCardLayout().show(this, this.warenkorb);
 	}
 
+
+	
+	
 }

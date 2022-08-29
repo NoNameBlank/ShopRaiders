@@ -35,7 +35,7 @@ public class KategoriePanel extends JPanel {
 		
 		String[] kategories = {"Kat 1", "Kat 2", "Kat 3"};
 		System.out.println(kategories[0]);
-		Arrays.stream(kategories).forEach(k-> this.getKatList().add(new JMenu(k)));
+		Arrays.stream(kategories).forEach(k-> this.getKatList().add(new JMenuItem(k)));
 		
 		this.getKatList().forEach(item-> super.add(item));
 

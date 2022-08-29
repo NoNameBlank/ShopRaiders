@@ -42,6 +42,7 @@ public class HeaderPanel extends JPanel {
 	
 	public void addActionListenerToBtnWarenkorb(ActionListener al) {
 		this.getBtnWarenkorb().addActionListener(al);
+		System.out.println("HeaderPanel: addActionLis to BtnWaren");
 		
 	}
 	
