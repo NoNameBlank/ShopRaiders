@@ -1,9 +1,13 @@
 package view.warenkorb;
 
 import java.awt.Color;
+import java.awt.GridLayout;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 public class WarenkorbPanel extends JPanel {
 
@@ -39,9 +43,32 @@ public class WarenkorbPanel extends JPanel {
 	
 	public WarenkorbPanel() {
 		super.setLayout(null);
-		super.setBounds(0, 0, 924, 618);
+		super.setBounds(0, 0, 924, 650);
 		super.setBackground(Color.GREEN);
 		
+		this.setWkHeader(new WarenkorbHeader());
+		super.add(this.getWkHeader());
+		
+		this.setCartItems(new ArrayList<>());
+		for (int i = 0; i < 10; i++) {
+			this.getCartItems().add(new WarenkorbPanelItem());
+		}
+		this.setCartPanel(new JPanel());
+		this.getCartPanel().setLayout(new GridLayout(this.getCartItems().size(),0));
+		
+		JScrollPane scrollPane = new JScrollPane(this.getCartPanel());
+		scrollPane.getVerticalScrollBar().setUnitIncrement(16);
+		scrollPane.setBounds(0, 50, 924, 618);
+		this.add(scrollPane);
+		
+		for (int i = 0; i < this.getCartItems().size(); i++) {
+			this.getCartPanel().add(this.getCartItems().get(i));
+		}
+		
+	}
+	
+	public void addActionListenerToBtnKasse(ActionListener al) {
+		this.getWkHeader().addActionListenerToBtnKasse(al);
 	}
 
 }

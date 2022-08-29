@@ -7,64 +7,58 @@ import javax.swing.JFrame;
 
 public class MainView extends JFrame {
 
-	 private StartPanel startPanel;
-	 private MainPanel mainPanel;
-	 
-	 
-	 
+	private StartPanel startPanel;
+	private MainPanel mainPanel;
 
 	public StartPanel getStartPanel() {
 		return startPanel;
 	}
 
-
-
 	public void setStartPanel(StartPanel startPanel) {
 		this.startPanel = startPanel;
 	}
-	
-	
-
-
 
 	public MainPanel getMainPanel() {
 		return mainPanel;
 	}
 
-
-
 	public void setMainPanel(MainPanel mainPanel) {
 		this.mainPanel = mainPanel;
 	}
 
-
-
 	public MainView() {
 		super.setLayout(null);
-		super.setBounds(0, 0, 1024, 794);
+		super.setBounds(0, 0, 1024, 768);
 		super.setBackground(Color.YELLOW);
 		super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+
 		this.setMainPanel(new MainPanel());
 		this.setStartPanel(new StartPanel());
 		super.setContentPane(this.getStartPanel());
-		
-	
-		
-		
-		
+
 		super.setVisible(true);
-		
-	
+
 	}
-	
-	//Sage der Main View wo der ActionListener ist
+
+	// Sage der Main View wo der ActionListener ist
 	public void addActionListenerToStartBtn(ActionListener al) {
 		this.getStartPanel().addActionListenerToBtnStart(al);
 	}
 
+	//BtnWarenkorb
+	public void addActionListenerToBtnWarenkorb(ActionListener al) {
+		this.getMainPanel().addActionListenerToBtnWarenkorb(al);
+	}
+	
+	
+	
 	public void showMainPanel() {
 		super.setContentPane(this.getMainPanel());
 	}
-	
+	//WarenKorb
+	public void showWarenkorbPanel() {
+		this.getMainPanel().showWarenkorb();
+		
+	}
+
 }

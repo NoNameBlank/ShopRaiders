@@ -19,6 +19,7 @@ public class MainController {
 	public MainController() {
 		this.setMainView(new MainView());
 		this.getMainView().addActionListenerToStartBtn(this::startBtn);
+		this.getMainView().addActionListenerToBtnWarenkorb(this::showWarenkorbPanel);
 		
 		this.getMainView().getMainPanel().getKategoriePanel().getKatList().get(0).addActionListener(this::kat1);
 	
@@ -28,6 +29,12 @@ public class MainController {
 	
 	private void startBtn(ActionEvent e) {
 		this.getMainView().showMainPanel();
+	}
+	
+	//Btn Warenkorb
+	private void showWarenkorbPanel(ActionEvent e) {
+		System.out.println("AUsgabe: WarenkorbAnzeigen");
+		this.getMainView().showWarenkorbPanel();
 	}
 	
 	private void kat1(ActionEvent e) {
